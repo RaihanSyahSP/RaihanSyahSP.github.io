@@ -1,0 +1,26 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #1a1a1a;
+}
+
+#projects {
+    background-color: #1a1a1a;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+footer, nav {
+    background-color: #1a1a1a;
+}
+
+
+a {
+    color: white;    
+}
+
+section p {
+    font-style: italic;
+}
+
