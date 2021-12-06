@@ -4,23 +4,37 @@
 }
 
 #projects {
-    background-color: #1a1a1a;
+  background-color: #1a1a1a;
 }
 
 section {
-    padding-top: 5rem;
+  padding-top: 5rem;
 }
 
-footer, nav {
-    background-color: #1a1a1a;
+footer {
+  background-color: white;
+}
+nav,
+#contact {
+  background-color: #1a1a1a;
 }
 
+#contact .container {
+  background-color: #1a1a1a;
+}
 
 a {
-    color: white;    
+  color: white;
 }
 
 section p {
-    font-style: italic;
+  font-style: italic;
 }
 
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}
