@@ -204,8 +204,9 @@
             // cari kelas btnLoading trs kalo di dalamnya ada class d-none hilangin, kl ga ada tambahin class d-none nya
             btnLoading.classList.toggle('d-none');
             btnKirim.classList.toggle('d-none');
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
             .then(response => {
+                // Handle success or remove this block if you don't need to access the response data
                 // tampilkan tombol kirim dan hilangkan tombol loading
                 btnLoading.classList.toggle('d-none');
                 btnKirim.classList.toggle('d-none');
@@ -214,7 +215,7 @@
                 // reset formnya
                 form.reset();
                 console.log('Success!', response)
-            })
+             })
             .catch(error => console.error('Error!', error.message))
         })
     </script>
