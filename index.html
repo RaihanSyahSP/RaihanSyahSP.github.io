@@ -70,10 +70,10 @@
             </div>
             <div class="row justify-content-center fs-5 text-center ">
                 <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
-                    <p>Hi, Welcome to my website! i'am a Final year undergraduate student at Universitas Komputer Indonesia majoring in Informatics Engineering. I'm passionate to learn about Web Development. </p>
+                    <p>As an undergraduate student majoring in computer science at Universitas Komputer Indonesia, I have gained a strong foundation in programming languages such as Javascript and Python, as well as a solid understanding of computer science concepts such as data structures and algorithms. Through my coursework, I have worked on several projects related to front-end development.</p>
                 </div>
-                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <p>Hobby is something to do which different with our work. The hobby make to refresh our body and our mind. My hobbies are riding and photography. I am happy with my hobby</p>
+                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
+                    <p>Currently, I am also actively pursuing knowledge and skills in the field of data analysis and data science. I am enthusiastic about expanding my expertise in data and leveraging it to drive impactful insights and solutions. Outside of my studies, I am involved in a technology community and have participated in various competitions. </p>
                 </div>
             </div>
         </div>
@@ -88,14 +88,14 @@
         <div class="container">
             <div class="row text-center mb-3">
                 <div class="col text-white">
-                    <h2>My Projects (Team)</h2>
+                    <h2>My Projects</h2>
                 </div>
             </div>
                 <div class="row justify-content-center text-dark align-items-stretch">
                     <div class="col-md-4 mb-3">
                         <div class="card d-flex flex-column h-100" data-aos="flip-left" data-aos-duration="500">
                             <a href="https://github.com/unikom-codelabs/dodo-desktop" target="_blank">
-                                <img src="./img/projects/logo-snailly.png" class="card-img-top" alt="project">
+                                <img src="./img/projects/logo-snailly.png" class="card-img-top img-fluid" alt="project">
                             </a>
                             <div class="card-body">
                                 <p class="card-text">Snailly is an application for mobile and desktop which can help parents to monitor and filter accessible websites for their children so they can browse safely.</p>
@@ -105,10 +105,20 @@
                     <div class="col-md-4 mb-3">
                         <div class="card d-flex flex-column h-100" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
                             <a href="https://github.com/unikom-codelabs/my-codelabs" target="_blank">
-                                <img src="./img/projects/codelabs.png" class="card-img-top" alt="project">
+                                <img src="./img/projects/codelabs.png" class="card-img-top img-fluid" alt="project">
                             </a>
                             <div class="card-body">
                                 <p class="card-text">My codelabs is a website-based application that functions as a monitoring member in the organization.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card d-flex flex-column h-100" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+                            <a href="https://whatsapp-direct-message-jade.vercel.app/" target="_blank">
+                                <img src="./img/projects/whats-app.png" class="card-img-top img-fluid custom-img-height" alt="project">
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text">Whatsapp Direct is a web application that can help people to chat directly with others without having to save their numbers first. Built using Next JS and Chakra UI</p>
                             </div>
                         </div>
                     </div>
@@ -192,6 +202,7 @@
 
 
     <script>
+        
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzMuKCDTjfhmxC8O3eA1GTS__ySe3qr1rC8CwSqH0TcdMxTOnnF_Hah87guZFhqfyEM/exec'
         const form = document.forms['contact-form-portofolio'];
         const btnKirim = document.querySelector('.btn-kirim'); 
@@ -199,20 +210,13 @@
         const myAlert = document.querySelector('.my-alert'); 
         form.addEventListener('submit', e => {
             e.preventDefault()
-            // ketika tombol submit diklik
-            // tampilkan tombol loading, hilangkan tombol kirim
-            // cari kelas btnLoading trs kalo di dalamnya ada class d-none hilangin, kl ga ada tambahin class d-none nya
             btnLoading.classList.toggle('d-none');
             btnKirim.classList.toggle('d-none');
             fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
             .then(response => {
-                // Handle success or remove this block if you don't need to access the response data
-                // tampilkan tombol kirim dan hilangkan tombol loading
                 btnLoading.classList.toggle('d-none');
                 btnKirim.classList.toggle('d-none');
-                // tampilkan alert
                 myAlert.classList.toggle('d-none');
-                // reset formnya
                 form.reset();
                 console.log('Success!', response)
              })

@@ -117,3 +117,8 @@ section p {
 .laptop-box:hover .laptop-img {
   transform: translate3d(-50%, -52%, 100px) scale(1.1);
 }
+
+.custom-img-height {
+    max-height: 405px; /* Atur tinggi maksimum sesuai kebutuhan */
+    width: auto; /* Biarkan lebar mengikuti aspek rasio */
+}
